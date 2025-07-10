@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VectorStrat Advisory - Investment Management Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">VectorStrat Advisory</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact" class="contact-btn">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Strategic Investment Advisory</h1>
+                <p class="hero-subtitle">20+ years of expertise in investment management and alternatives</p>
+                <p class="hero-description">
+                    Helping investment teams, startups, and hedge funds build sustainable competitive advantages through business and investment strategy consulting, portfolio-strategy support, and risk governance.
+                </p>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        With over two decades of experience in the investment management and alternatives space, 
+                        I bring deep expertise in building high-performing teams, portfolio management, risk management, 
+                        and strategic execution.
+                    </p>
+                    <p>
+                        My background spans across investment management and startup advisory, 
+                        helping organizations navigate complex market environments and 
+                        achieve sustainable growth.
+                    </p>
+                    <div class="expertise">
+                        <h3>Core Expertise</h3>
+                        <ul>
+                            <li>Investment Management & Portfolio Strategy</li>
+                            <li>Risk Management & Compliance</li>
+                            <li>Team Building & Leadership Development</li>
+                            <li>Startup & Hedge Fund Advisory</li>
+                            <li>Strategic Planning & Execution</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="BL Headshot.jpeg" alt="Brian - VectorStrat Advisory" class="headshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Investment Management</h3>
+                    <p>Comprehensive guidance on portfolio design, risk governance, process optimization, and hedge-fund launch support.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Startup Advisory</h3>
+                    <p>Strategic support on financial planning, fundraising readiness, and scalable operations for early-stage companies.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Team Building & Strategic Execution</h3>
+                    <p>Advisory on building high-performing investment teams, elevating leadership, and coordinating execution for scalable, sustainable growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="contact-intro">Ready to discuss your strategy? Let's start a conversation.</p>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Interest</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="investment-management">Investment Management Consulting</option>
+                        <option value="startup-advisory">Startup Advisory</option>
+                        <option value="hedge-fund-consulting">Hedge Fund Consulting</option>
+                        <option value="team-building">Team Building & Leadership</option>
+                        <option value="risk-management">Risk Management</option>
+                        <option value="strategic-execution">Strategic Execution</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or how I can help..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 VectorStrat Advisory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
