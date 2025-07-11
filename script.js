@@ -1,3 +1,6 @@
+// Initialize EmailJS
+emailjs.init("H3EYgg8SuEgjbnXSB");
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -12,7 +15,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact form handling
+// Contact form handling with EmailJS
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -33,25 +36,32 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         return;
     }
     
-    // Show success message
+    // Show loading state
     const submitBtn = this.querySelector('.submit-btn');
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     
-    // Simulate form submission (replace with actual email service)
-    setTimeout(() => {
-        alert('Thank you for your message! I will get back to you soon.');
-        this.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 1500);
-    
-    // For production, you would integrate with an email service like:
-    // - EmailJS
-    // - Formspree
-    // - Netlify Forms
-    // - Your own backend API
+    // Send email using EmailJS
+    emailjs.send('service_rje7nty', 'template_d2f5vgo', {
+        name: data.name,
+        email: data.email,
+        company: data.company || 'Not provided',
+        service: data.service || 'Not specified',
+        message: data.message
+    }).then(
+        function(response) {
+            alert('Thank you for your message! I will get back to you soon.');
+            document.getElementById('contact-form').reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        },
+        function(error) {
+            alert('Sorry, there was an error sending your message. Please try again.');
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
+    );
 });
 
 // Navbar background on scroll
